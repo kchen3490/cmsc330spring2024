@@ -99,7 +99,7 @@ module Foo : FOO =
   struct
     let add x y = x + y
     let mult x y = x * y
-end
+end`
 
 Foo.add 3 4;;    (* OK *)
 Foo.mult 3 4;;  (* not accessible *)

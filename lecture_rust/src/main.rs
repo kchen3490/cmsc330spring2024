@@ -2,6 +2,10 @@
 * First time learning Rust!! - Nov 11, 2024
 */
 
+fn takes_slice(slice: &str) {
+    println!("Got: {}", slice);
+}
+
 fn main() {
     //let x:i32 = 10; // signed integer, can be either +/-
 
@@ -75,4 +79,43 @@ fn main() {
         println!("{}", s1);
 
     }
+
+    /*
+    Lifetime
+     */
+    let y = String::from("there");
+    {
+        let x = String::from("hi");
+        //let z;
+        {
+            // look online for notes on longest()
+            //z = longest(&x, &y); // will be &y
+        } // drop y, and thereby z
+        //println!("z = {}", z);  // yikes!
+    }
+
+    /*
+    Slice
+     */
+    let s = "Hello".to_string();
+    takes_slice(&s);    // above
+
+    /*
+    Array
+     */
+    let xs: [i32; 5] = [1, 2, 3, 4, 5]; // fixed size
+    
+    let mut v = vec![1,2,3];
+    v.push(4);
+    println!("v={:?}",v);
+    // v needs to implement Java: toString(), or Rust's Display()
+
+    for v in xs.iter() {    // v is shadowed here
+        println!("{}", v);
+    }
+
+    println!("2nd item in xs is: {}", xs[1]);
+
+    let y = [0;10]; // fill array size 10 with 0s: [0,0,0,...] 
+
 }

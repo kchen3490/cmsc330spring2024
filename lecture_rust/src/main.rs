@@ -2,6 +2,26 @@
 * First time learning Rust!! - Nov 11, 2024
 */
 
+/*
+    To create a new rust project/program, go to terminal and type: 
+    cargo new --bin name
+    
+    
+    To build and run rust programs, go to terminal and type
+    cargo build
+
+    cargo run
+
+    OR
+
+    type rustc fileName.rs
+    to create executable
+
+    then type ./fileName
+    to run the executable
+    (replace fileName/ .rs program file)
+*/
+
 fn takes_slice(slice: &str) {
     println!("Got: {}", slice);
 }
@@ -83,7 +103,7 @@ fn main() {
     /*
     Lifetime
      */
-    let y = String::from("there");
+    let y = String::from("there"); // string stored on heap
     {
         let x = String::from("hi");
         //let z;

@@ -1,5 +1,5 @@
 
-ruse std::cell::Cell;
+use std::cell::Cell;
 
 #[derive(Debug)]
 struct Point {

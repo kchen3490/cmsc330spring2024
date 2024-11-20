@@ -1,5 +1,7 @@
 /* 11/18/2024 */
 
+mod trait_object;
+
 /* Traits are like interfaces! */
 trait Printable {
     fn stringify(&self)->String; // ->String means fn has to return a string

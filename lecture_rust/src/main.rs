@@ -38,6 +38,7 @@ fn main() {
     println!("x is {}", x);
 
     let y:i32 = x;      // Copy
+    println!("x is {}", x); // bc only copy, no borrowing, so x is still pointing to its own memory
     println!("y is {}", y);
     /*
     Copy: assignment will clone, (e.g., y points to copy of 10, 

@@ -1,3 +1,6 @@
+#![allow(unused_imports)]
+#![allow(warnings)]
+
 //Used for question 2, 6
 /*
 use std::any::type_name;
@@ -9,16 +12,20 @@ fn type_of<T>(_: T) -> &'static str {
 
 
 fn main() {
-    /* // Question 2
-    let test = {
-        let x = 32;
-        let y = true;
-        let z = if y{x; 1.0} else {let a = 2.0; a};
-        println!("{}", type_of(z));
-    };
+    // Question 2
+    let x = 32;
+    let y = true;
+    let z = if y{x; 1.0} else {let a = 2.0; a};
+    
+    // let test = {
+    //     let x = 32;
+    //     let y = true;
+    //     let z = if y{x; 1.0} else {let a = 2.0; a};
+    //     // println!("{}", type_of(z));
+    // };
     //println!("{}", type_of(1.0));
     //println!("{}", type_of(test));  // should return z
-    */
+    
 
     /* // Question 3
     let z = {
@@ -83,13 +90,14 @@ fn main() {
     println!("{}", s4);
     println!("{}", y);
     */
-
+    /*
     // Question 11
     let s = String::from("Hello");
     greet(&s);
     println!("{}", s);
     change_string(s);
     println!("{}", s);
+    */
 }
 
 fn greet(s: &String) {
